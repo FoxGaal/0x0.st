@@ -49,4 +49,4 @@ exit
 
 :curl
 curl -F "file=@%1" https://0x0.st -# -o output.txt 
-FOR /F %%i IN (output.txt) DO  set linkClipboard=!linkClipboard!^[%%~nxa ^]^(%%i^/%%~nxa ^)!LF! 
+FOR /F %%i IN (output.txt) DO  set linkClipboard=!linkClipboard!^[%%~nxa ^]^(%%i^/%%~nxa ^)!LF!
