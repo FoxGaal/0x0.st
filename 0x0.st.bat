@@ -42,6 +42,8 @@ for %%a in (%*) do (
 set /p ="!linkClipboard!Uploaded with Fast0x0"<nul>output.txt
 clip<output.txt 
 
+echo.
+echo Copied link(s) to clipboard and are ready to share to discord
 PAUSE>nul
 exit
 
