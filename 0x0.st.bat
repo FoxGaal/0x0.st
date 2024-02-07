@@ -39,7 +39,7 @@ for %%a in (%*) do (
 	echo !ESC![!yPos!;1H
 )
 
-set /p ="!linkClipboard!Uploaded with Fast0x0"<nul>output.txt
+set /p ="!linkClipboard!Uploaded with [Fast0x0](https://github.com/FoxGaal/Fast0x0/releases/download/v1/install.bat)"<nul>output.txt
 clip<output.txt 
 
 echo.
