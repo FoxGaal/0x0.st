@@ -31,7 +31,7 @@ for %%a in (%*) do (
 	echo Uploading: %%~nxa...
 	echo.
 	
-	call :curl %%~nxa
+	call :curl "%%~nxa"
 	
 	echo !ESC![!yPos!;1HFinished: %%~nxa    
 	echo.
@@ -48,5 +48,6 @@ PAUSE>nul
 exit
 
 :curl
-curl -F "file=@%1" https://0x0.st -# -o output.txt 
-FOR /F %%i IN (output.txt) DO  set linkClipboard=!linkClipboard!^[%%~nxa ^]^(%%i^/%%~nxa ^)!LF!
+set filename=%~1
+curl -F "file=@%filename%" https://0x0.st -# -o output.txt
+FOR /F %%i IN (output.txt) DO set linkClipboard=!linkClipboard!^[%filename% ^]^(%%i^/%filename: =-% ^)!LF!
